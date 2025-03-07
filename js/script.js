@@ -62,7 +62,7 @@ function playGame() {
         humanChoice = getHumanChoice(i);
         computerChoice = getComputerChoice();
 
-        result = playGame(humanChoice, computerChoice);
+        result = playRound(humanChoice, computerChoice);
         console.log(result);
     }
 
