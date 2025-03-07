@@ -12,8 +12,9 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-    return prompt('Write "rock", "paper", or "scissors":');
+    return prompt('Write "rock", "paper", or "scissors":').trim().toLowerCase();
 }
 
 
-alert(getComputerChoice());
+let humanScore = 0;
+let computerScore = 0;
