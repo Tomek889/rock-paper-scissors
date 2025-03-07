@@ -58,14 +58,11 @@ function playRound(humanSelection, computerSelection) {
 
 
 function playGame() {
-    let humanChoice;
-    let computerChoice;
-    
     for (let i = 1; i <= 5; i++) {
-        humanChoice = getHumanChoice(i);
-        computerChoice = getComputerChoice();
+        let humanChoice = getHumanChoice(i);
+        let computerChoice = getComputerChoice();
 
-        result = playRound(humanChoice, computerChoice);
+        let result = playRound(humanChoice, computerChoice);
         console.log(result);
     }
 
