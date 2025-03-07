@@ -2,10 +2,18 @@ function getComputerChoice() {
     let random_number = Math.random();
 
     if (random_number <= (1 / 3)) {
-        return "scissors";
+        return 'scissors';
     } else if (random_number <= (2 / 3)) {
-        return "rock";
+        return 'rock';
     } else {
-        return "paper";
+        return 'paper';
     }
 }
+
+
+function getHumanChoice() {
+    return prompt('Write "rock", "paper", or "scissors":');
+}
+
+
+alert(getComputerChoice());
