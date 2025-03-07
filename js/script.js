@@ -59,7 +59,7 @@ function playRound(humanSelection, computerSelection) {
 
 function playGame() {
     for (i = 1; i <= 5; i++) {
-        humanChoice = getHumanChoice();
+        humanChoice = getHumanChoice(i);
         computerChoice = getComputerChoice();
 
         result = playGame(humanChoice, computerChoice);
