@@ -16,5 +16,14 @@ function getHumanChoice() {
 }
 
 
+function playRound() {
+    // todo
+}
+
+
 let humanScore = 0;
 let computerScore = 0;
+
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
