@@ -12,11 +12,17 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-    return prompt('Write "rock", "paper", or "scissors":').trim().toLowerCase();
+    let humanSelection = prompt('Write "rock", "paper", or "scissors":').trim().toLowerCase();
+
+    while (humanSelection !== 'rock' && humanSelection !== 'paper' && humanSelection !== 'scissors') {
+        humanSelection = prompt('Invalid input. Write "rock", "paper", or "scissors":');
+    }
+
+    return humanSelection;
 }
 
 
-function playRound() {
+function playRound(humanSelection, computerSelection) {
     // todo
 }
 
@@ -25,5 +31,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+let humanChoice;
+let computerChoice;
+
+
+alert(getHumanChoice());
