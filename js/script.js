@@ -59,7 +59,21 @@ function playRound(humanSelection, computerSelection) {
 
 function playGame() {
     for (i = 1; i <= 5; i++) {
-        
+        humanChoice = getHumanChoice();
+        computerChoice = getComputerChoice();
+
+        result = playGame(humanChoice, computerChoice);
+        console.log(result);
+    }
+
+    console.log(`\nYour score: ${humanScore}, computer's score: ${computerScore}`);
+
+    if (humanScore > computerScore) {
+        console.log('You\'ve won the game!');
+    } else if (humanScore === computerScore) {
+        console.log('It\'s a tie.');
+    } else {
+        console.log('Computer\'s won the game!');
     }
 }
 
@@ -71,5 +85,3 @@ let computerScore = 0;
 let humanChoice;
 let computerChoice;
 
-
-alert(getHumanChoice());
