@@ -10,7 +10,7 @@ This is a simple implementation of the classic "Rock, Paper, Scissors" game in J
 
 
 ## How to Play
-1. Open the app by visiting: .
+1. Open the app by visiting: https://tomek889.github.io/rock-paper-scissors/.
 2. Click one of the buttons (rock, paper, or scissors) to make your choice.
 3. The game will display the result of each round and update the scores.
 4. The game continues until either the player or the computer reaches five points.
