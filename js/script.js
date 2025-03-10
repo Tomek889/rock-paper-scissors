@@ -11,17 +11,6 @@ function getComputerChoice() {
 }
 
 
-function getHumanChoice(gameNumber) {
-    let humanSelection = prompt(`Game ${gameNumber}. Write "rock", "paper", or "scissors":`).trim().toLowerCase();
-
-    while (humanSelection !== 'rock' && humanSelection !== 'paper' && humanSelection !== 'scissors') {
-        humanSelection = prompt(`Invalid input! Game ${gameNumber}. Write "rock", "paper", or "scissors":`).trim().toLowerCase();
-    }
-
-    return humanSelection;
-}
-
-
 function playRound(humanSelection, computerSelection) {
     if (humanSelection === 'rock') {
         if (computerSelection === 'rock') {
