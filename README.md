@@ -1,17 +1,17 @@
 # Rock Paper Scissors
-This is a simple implementation of the classic "Rock, Paper, Scissors" game in JavaScript. The game is played in the console, where the player competes against the computer over five rounds. It was built as a part of The Odin Project curriculum.  
+This is a simple implementation of the classic "Rock, Paper, Scissors" game in JavaScript with a graphical user interface (GUI). The player competes against the computer, and the first to reach five points wins the game. It was built as part of The Odin Project curriculum.
 
 
 ## Features
-- The game randomly selects the computer's choice: rock, paper, or scissors.  
-- The player is prompted to enter their choice.  
-- The game compares the player's and computer's choices and determines the outcome (win, lose, or tie) for each round.  
-- The score is updated and displayed after each round, and the final score is shown at the end of the game.  
+- Interactive UI with buttons for selecting rock, paper, or scissors.
+- The game randomly selects the computer’s choice.
+- Scores update dynamically after each round.
+- The game ends when either the player or the computer reaches five points, displaying the winner.
 
 
 ## How to Play
-1. Open the JavaScript console in your browser.  
-2. Paste the code into the console and press "Enter" to run the game.  
-3. You will be prompted to enter your choice: "rock", "paper", or "scissors" for each round.  
-4. The game will display the results of each round and your score.  
-5. After 5 rounds, the final score will be displayed, and the game will announce the winner.
+1. Open the app by visiting: .
+2. Click one of the buttons (rock, paper, or scissors) to make your choice.
+3. The game will display the result of each round and update the scores.
+4. The game continues until either the player or the computer reaches five points.
+5. The winner is announced, and the game visually disables further selections.
