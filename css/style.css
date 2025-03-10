@@ -45,3 +45,11 @@ button {
     font-weight: 850;
     margin-bottom: 50px;
 }
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
