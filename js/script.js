@@ -40,7 +40,7 @@ function playRound(humanSelection, computerSelection) {
             return 'Human choice: scissors, computer choice: scissors\nIt\'s a tie.';
         } else {
             humanScore++;
-            return 'Human choice: scissors, computer choice: paper\nYou\'ve won!';
+            return 'Human choice: scissors, computer choice: paper You\'ve won!';
         }
     }
 }
@@ -67,8 +67,26 @@ function playGame() {
 }
 
 
+function changeDisplays(result='') {
+    humanScoreDisplay.textContent = humanScore;
+    computerScoreDisplay.textContent = computerScore;
+    resultDisplay.textContent = result;
+
+    if (!isWinner) {
+        if (humanScore === 5) {
+            winnerDisplay.textContent = "The user has won the whole game!";
+            isWinner = true;
+        } else if (computerScore === 5) {
+            winnerDisplay.textContent = "The computer has won the whole game!";
+            isWinner = true;
+        }
+    }
+}
+
+
 let humanScore = 0;
 let computerScore = 0;
+let isWinner = false;
 
 
 const rockOption = document.querySelector('#rock');
@@ -84,12 +102,17 @@ const winnerDisplay = document.querySelector("#winner");
 
 rockOption.addEventListener('click', () => {
     const result = playRound('rock', getComputerChoice());
+    changeDisplays(result);
 });
 
 paperOption.addEventListener('click', () => {
     const result = playRound('paper', getComputerChoice());
+    changeDisplays(result);
 });
 
 scissorsOption.addEventListener('click', () => {
     const result = playRound('scissors', getComputerChoice());
-})
+    changeDisplays(result);
+});
+
+changeDisplays();
