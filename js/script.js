@@ -40,29 +40,8 @@ function playRound(humanSelection, computerSelection) {
             return 'Human choice: scissors, computer choice: scissors\nIt\'s a tie.';
         } else {
             humanScore++;
-            return 'Human choice: scissors, computer choice: paper You\'ve won!';
+            return 'Human choice: scissors, computer choice: paper\nYou\'ve won!';
         }
-    }
-}
-
-
-function playGame() {
-    for (let i = 1; i <= 5; i++) {
-        let humanChoice = getHumanChoice(i);
-        let computerChoice = getComputerChoice();
-
-        let result = playRound(humanChoice, computerChoice);
-        console.log(result);
-    }
-
-    console.log(`\nYour score: ${humanScore}, computer's score: ${computerScore}`);
-
-    if (humanScore > computerScore) {
-        console.log('You\'ve won the game!');
-    } else if (humanScore === computerScore) {
-        console.log('It\'s a tie.');
-    } else {
-        console.log('Computer\'s won the game!');
     }
 }
 
@@ -99,6 +78,7 @@ const computerScoreDisplay = document.querySelector("#computer-score");
 const resultDisplay = document.querySelector("#result");
 const winnerDisplay = document.querySelector("#winner");
 
+resultDisplay.style.whiteSpace = "pre-line";
 
 rockOption.addEventListener('click', () => {
     const result = playRound('rock', getComputerChoice());
