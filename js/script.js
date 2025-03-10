@@ -82,4 +82,25 @@ let humanScore = 0;
 let computerScore = 0;
 
 
-playGame();
+const rockOption = document.querySelector('#rock');
+const paperOption = document.querySelector('#paper');
+const scissorsOption = document.querySelector('#scissors');
+
+
+const humanScoreDisplay = document.querySelector("#human-score");
+const computerScoreDisplay = document.querySelector("#computer-score");
+const resultDisplay = document.querySelector("#result");
+const winnerDisplay = document.querySelector("#winner");
+
+
+rockOption.addEventListener('click', () => {
+    const result = playRound('rock', getComputerChoice());
+});
+
+paperOption.addEventListener('click', () => {
+    const result = playRound('paper', getComputerChoice());
+});
+
+scissorsOption.addEventListener('click', () => {
+    const result = playRound('scissors', getComputerChoice());
+})
