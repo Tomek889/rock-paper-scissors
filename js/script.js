@@ -55,13 +55,21 @@ function changeDisplays(result='') {
         if (humanScore === 5) {
             winnerDisplay.textContent = "The user has won the whole game!";
             isWinner = true;
+            disableButtons();
         } else if (computerScore === 5) {
             winnerDisplay.textContent = "The computer has won the whole game!";
             isWinner = true;
+            disableButtons();
         }
     }
 }
 
+
+function disableButtons() {
+    rockOption.disabled = true;
+    paperOption.disabled = true;
+    scissorsOption.disabled = true;
+}
 
 let humanScore = 0;
 let computerScore = 0;
